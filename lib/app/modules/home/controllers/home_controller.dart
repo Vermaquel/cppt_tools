@@ -6,10 +6,10 @@ class HomeController extends GetxController {
 
   // Constant
   List<String> keadaanUmum = [
-    "baik",
-    "membaik",
-    "sedang",
-    "perburukan",
+    "Baik",
+    "Membaik",
+    "Sedang",
+    "Perburukan",
   ];
 
   List<String> kesadaran = [
