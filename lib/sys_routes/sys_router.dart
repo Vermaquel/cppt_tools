@@ -7,7 +7,7 @@ final GoRouter routerConfig = GoRouter(
     GoRoute(
       path: '/',
       builder: (BuildContext context, GoRouterState state) {
-        return const LayoutCpptTools();
+        return LayoutCpptTools();
       },
       // routes: <RouteBase>[
       //   GoRoute(
