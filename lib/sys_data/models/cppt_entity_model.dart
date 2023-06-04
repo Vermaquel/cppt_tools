@@ -68,12 +68,9 @@ class CpptEntity {
     result += "\nWong Baker $wongbaker ";
     result += "\nResiko Jatuh: $resikoJatuh x/menit";
 
-    if (map != "") {
-      result += "\nMAP: ${map} mmHg";
-    }
-    if (urin != "") {
-      result += "\nTotal Urin: ${urin} cc";
-    }
+    result += (map != "")? "\nMAP: ${map} mmHg" : "";
+    result += (urin != "")? "\nTotal Urin: ${urin} cc" : "";
+
     return result;
   }
 }
