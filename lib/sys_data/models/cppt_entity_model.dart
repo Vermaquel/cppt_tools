@@ -66,7 +66,7 @@ class CpptEntity {
     result += "\nRR: $rr x/menit";
     result += "\nT: $t C";
     result += "\nWong Baker $wongbaker ";
-    result += "\nResiko Jatuh: $resikoJatuh x/menit";
+    result += "\nResiko Jatuh: $resikoJatuh";
     result += (map != null) ? "\nMAP: $map mmHg" : "";
     result += (urin != null) ? "\nTotal Urin: $urin cc" : "";
 
