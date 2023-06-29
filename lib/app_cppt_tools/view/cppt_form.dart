@@ -27,11 +27,17 @@ class CpptForm extends ConsumerWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
+                const Row(children: [
+                  Text(
+                    'Objektif',
+                    style: textStyleJudul,
+                  ),
+                ]),
                 FormBuilderDropdown<String>(
                   // autovalidate: true,
                   name: 'keadaanUmum',
                   initialValue: 'Sedang',
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     labelText: 'Keadaan Umum:',
                   ),
                   items: keadaanUmum
@@ -48,7 +54,7 @@ class CpptForm extends ConsumerWidget {
                   // autovalidate: true,
                   name: 'kesadaran',
                   initialValue: 'Compos mentis',
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     labelText: 'Kesadaran:',
                   ),
                   items: kesadaran
@@ -163,7 +169,7 @@ class CpptForm extends ConsumerWidget {
                   ),
                   onChanged: (value) => cpptData.urin = value ?? "",
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 ElevatedButton(

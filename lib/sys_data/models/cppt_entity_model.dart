@@ -11,6 +11,7 @@ class CpptEntity {
   String? urin;
   String? wongbaker;
   String? resikoJatuh;
+  String? subjektif;
 
   CpptEntity(
       {this.keadaanUmum = "Sedang",
@@ -23,7 +24,8 @@ class CpptEntity {
       this.map,
       this.urin,
       this.wongbaker = "3",
-      this.resikoJatuh = "35"});
+      this.resikoJatuh = "35",
+      this.subjektif = "Keluhan (-)"});
 
   CpptEntity.fromJson(Map<String, dynamic> json) {
     keadaanUmum = json['keadaanUmum'];
@@ -38,6 +40,7 @@ class CpptEntity {
     urin = json['urin'];
     wongbaker = json['wongbaker'];
     resikoJatuh = json['resikoJatuh'];
+    subjektif = json['subjektif'];
   }
 
   Map<String, dynamic> toJson() {
@@ -54,6 +57,8 @@ class CpptEntity {
     data['urin'] = urin;
     data['wongbaker'] = wongbaker;
     data['resikoJatuh'] = resikoJatuh;
+    data['subjektif'] = subjektif;
+
     return data;
   }
 
@@ -67,9 +72,8 @@ class CpptEntity {
     result += "\nT: $t C";
     result += "\nWong Baker $wongbaker ";
     result += "\nResiko Jatuh: $resikoJatuh";
-    result += (map != null) ? "\nMAP: $map mmHg" : "";
-    result += (urin != null) ? "\nTotal Urin: $urin cc" : "";
-
+    result += (map == null || map == "") ? "" : "\nMAP: $map mmHg";
+    result += (urin == null || urin == "") ? "" : "\nTotal Urin: $urin cc";
     return result;
   }
 }
