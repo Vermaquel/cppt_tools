@@ -20,6 +20,8 @@ class AssesmentForm extends ConsumerWidget {
   List<String> siapa = ["Pasien", "Keluarga"];
   String bambang = "Pasien";
   final assesmentC = Get.find<AssesmentController>();
+  final List<DiagnoseEntity> diagnoseListSorted = diagnoseList;
+  // .sort((a, b) => a.diagnose.toString().toLowerCase().compareTo(b.diagnose.toString().toLowerCase()));
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -39,7 +41,7 @@ class AssesmentForm extends ConsumerWidget {
             ),
             Autocomplete<DiagnoseEntity>(
               optionsBuilder: (textEditingValue) {
-                return diagnoseList
+                return diagnoseListSorted
                     .where((diagnose) =>
                         (diagnose.diagnose!.contains(textEditingValue.text)))
                     .toList();

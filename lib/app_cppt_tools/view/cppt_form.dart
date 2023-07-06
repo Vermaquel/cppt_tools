@@ -153,6 +153,15 @@ class CpptForm extends ConsumerWidget {
                 ),
                 FormBuilderTextField(
                   autovalidateMode: AutovalidateMode.always,
+                  name: 'sat',
+                  keyboardType: TextInputType.number,
+                  decoration: const InputDecoration(
+                    labelText: 'SpO2:',
+                  ),
+                  onChanged: (value) => cpptData.saturasi = value ?? "",
+                ),
+                FormBuilderTextField(
+                  autovalidateMode: AutovalidateMode.always,
                   name: 'map',
                   keyboardType: TextInputType.number,
                   decoration: const InputDecoration(

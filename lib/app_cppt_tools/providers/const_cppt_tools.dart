@@ -31,7 +31,7 @@ final diagnoseList = <DiagnoseEntity>[
 - Monitor TTV
 - Atur posisi semi fowler - fowler
 - Motivasi napas dalam
-- Kolaborasi dengan dokte''',
+- Kolaborasi dengan dokter''',
   ),
   DiagnoseEntity(
     diagnose: 'Bersihan jalan napas tidak efektif',
@@ -71,6 +71,20 @@ final diagnoseList = <DiagnoseEntity>[
 - Monitor rasa nyaman
 - Ajarkan teknik relaksasi
 - Kolaborasi dengan dokter''',
+  ),
+  DiagnoseEntity(
+    diagnose: 'Defisit nutrisi',
+    planning: '''Manajemen nutrisi
+- Monitor TTV
+- Monitor makan minum
+- Anjurkan makan sedikit tapi sering
+- Kolaborasi dengan dokter''',
+  ),
+  DiagnoseEntity(
+    diagnose: 'Masalah teratasi',
+    planning: '''Px PBJ
+Px kontrol di Poli
+Tgl ''',
   ),
 ];
 
